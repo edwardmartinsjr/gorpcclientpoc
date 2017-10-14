@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
+	proto "github.com/gorpcserverpoc/proto"
 	micro "github.com/micro/go-micro"
 	"github.com/micro/go-micro/client"
-	proto "github.com/service/proto"
 )
 
 func main() {
@@ -19,7 +19,7 @@ func main() {
 	// create the greeter client using the service name and client
 	greeter := NewGreeterClient("greeter", service.Client())
 
-	// request the Hello method on the Greeter handler
+	// request the Hello OR Goodbye method on the Greeter handler
 	//rsp, err := greeter.Hello(context.TODO(), &proto.HelloRequest{
 	rsp, err := greeter.Goodbye(context.TODO(), &proto.GoodbyeRequest{
 		Name: "John",
