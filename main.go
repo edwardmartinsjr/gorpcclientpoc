@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	proto "github.com/gorpcserverpoc/proto"
+	proto "github.com/edwardmartinsjr/gorpcserverpoc/proto"
 	micro "github.com/micro/go-micro"
 	"github.com/micro/go-micro/client"
 )
