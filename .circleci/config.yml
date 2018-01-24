@@ -24,3 +24,7 @@ jobs:
       # specify any bash command here prefixed with `run: `
       - run: go get -v -t -d ./...
       - run: go test -v ./...
+
+notify:
+  webhooks:
+    - url: https://webhook.site/f02c230d-b0c1-4d43-92b6-752a7efe5e33 
